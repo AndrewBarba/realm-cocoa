@@ -35,6 +35,7 @@ static NSString *const c_RLMRealmConfigurationProperties[] = {
     @"schemaVersion",
     @"migrationBlock",
     @"deleteRealmIfMigrationNeeded",
+    @"shouldCompactOnLaunchBlock",
     @"dynamic",
     @"customSchema",
 };
@@ -113,6 +114,7 @@ NSString *RLMRealmPathForFile(NSString *fileName) {
     configuration->_cache = _cache;
     configuration->_dynamic = _dynamic;
     configuration->_migrationBlock = _migrationBlock;
+    configuration->_shouldCompactOnLaunchBlock = _shouldCompactOnLaunchBlock;
     configuration->_customSchema = _customSchema;
     return configuration;
 }
